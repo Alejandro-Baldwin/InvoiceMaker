@@ -1,9 +1,9 @@
 from time_fixer import time_fixer
-from date_fixer import date_fixer
+from dateValidator import dateValidator
 
 
 def printer(date, position, timeIn, timeOut, walkaway, rate):
-    date = date_fixer(date)
+    date = dateValidator(date)
     #Gets the time fixed and gets the number for total time logic
     inh = time_fixer(timeIn)
     outh = time_fixer(timeOut)
