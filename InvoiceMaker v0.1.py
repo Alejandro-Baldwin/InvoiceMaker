@@ -3,7 +3,7 @@ from printer import printer
 from hourChecker import hourChecker
 import pandas as pd
 from time_fixer import time_fixer
-from date_fixer import date_fixer
+from dateValidator import dateValidator
 from pandas import ExcelWriter
 from pandas import ExcelFile
 import numpy as np
@@ -46,7 +46,7 @@ while s == True:
         body = printer(date, position, timeIn, timeOut, walkAway, rate)
         lines.append(body[0])
         grandTotal += body[2]
-        dateK = date_fixer(date)
+        dateK = dateValidator(date)
         dateList.append(dateK)
         positionList.append(position)
         timeInList.append(time_fixer(timeIn)[0])
